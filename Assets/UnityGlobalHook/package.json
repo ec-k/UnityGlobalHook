@@ -1,0 +1,31 @@
+{
+  "name": "com.ec-k.unityglobalhook",
+  "version": "0.1.0",
+  "displayName": "Unity Global Hook",
+  "description": "A Unity package providing global keyboard and mouse input detection for Windows, using P/Invoke to interact with the Windows API. It allows your Unity application to receive input events even when it's in the background.",
+  "unity": "2022.3",
+  "unityRelease": "22f1",
+  "keywords": [
+    "Unity",
+    "Global",
+    "Input",
+    "Hook",
+    "Keyboard",
+    "Mouse",
+    "Windows",
+    "PInvoke",
+    "Background"
+  ],
+  "author": {
+    "name": "EC-K",
+    "url": "https://github.com/ec-k"
+  },
+  "samples": [
+    {
+      "displayName": "Global Input Logger Sample",
+      "description": "Logs all detected global keyboard and mouse events to the Unity console.",
+      "path": "Samples"
+    }
+  ],
+  "dependencies": {}
+}
