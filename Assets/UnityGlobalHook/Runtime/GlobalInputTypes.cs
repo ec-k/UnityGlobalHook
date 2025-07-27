@@ -1,6 +1,6 @@
 using System;
 
-namespace EC2K.UnityGlobalHook
+namespace UnityGlobalHook
 {
     [Flags]
     public enum ModifierKeysState : byte

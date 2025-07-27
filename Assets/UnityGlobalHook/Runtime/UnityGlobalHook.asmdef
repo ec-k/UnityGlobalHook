@@ -1,6 +1,6 @@
 {
     "name": "UnityGlobalHook",
-    "rootNamespace": "EC2K.UnityGlobalHook",
+    "rootNamespace": "UnityGlobalHook",
     "references": [],
     "includePlatforms": [
         "Editor",

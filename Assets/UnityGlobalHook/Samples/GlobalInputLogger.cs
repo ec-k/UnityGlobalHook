@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace EC2K.UnityGlobalHook.Samples
+namespace UnityGlobalHook.Samples
 {
     /// <summary>
     /// A sample script that subscribes to and logs events published by GlobalInputHook.

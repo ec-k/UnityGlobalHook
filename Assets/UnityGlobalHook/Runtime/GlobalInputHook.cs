@@ -4,7 +4,7 @@ using System.Runtime.InteropServices;
 using UnityEditor.Search;
 using UnityEngine;
 
-namespace EC2K.UnityGlobalHook
+namespace UnityGlobalHook
 {
     /// <summary>
     /// A static utility class for detecting global mouse and keyboard input.

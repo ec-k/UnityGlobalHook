@@ -1,7 +1,7 @@
 using System;
 using System.Runtime.InteropServices;
 
-namespace EC2K.UnityGlobalHook
+namespace UnityGlobalHook
 {
     // Defines Windows API P/Invoke declarations.
     // Uses C# PascalCase naming conventions while providing original Windows API names in comments for reference.
