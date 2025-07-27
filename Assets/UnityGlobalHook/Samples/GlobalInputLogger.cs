@@ -6,24 +6,26 @@ namespace EC2K.UnityGlobalHook.Samples
     /// A sample script that subscribes to and logs events published by GlobalInputHook.
     /// Used for verifying the package's functionality and as an example of usage.
     /// </summary>
-    [RequireComponent(typeof(GlobalInputHook))]
     public class GlobalInputLogger : MonoBehaviour
     {
-        // Subscribe to GlobalInputHook events when this component is enabled.
-        void OnEnable()
+        void Start()
         {
+            GlobalInputHook.StartHooks();
             GlobalInputHook.OnKeyboardEvent += HandleKeyboardEvent;
             GlobalInputHook.OnMouseEvent += HandleMouseEvent;
-            Debug.Log("GlobalInputLogger: Subscribed to events.");
         }
 
-        // Unsubscribe from GlobalInputHook events when this component is disabled or destroyed.
-        // This is crucial to prevent memory leaks.
-        void OnDisable()
+        void OnDestroy()
         {
             GlobalInputHook.OnKeyboardEvent -= HandleKeyboardEvent;
             GlobalInputHook.OnMouseEvent -= HandleMouseEvent;
             Debug.Log("GlobalInputLogger: Unsubscribed from events.");
+
+            // Call StopHooks if global hooks are no longer needed for the entire application.
+            // (Typically, the internal HookDispatcher automatically calls it when the application quits,
+            // so explicit calls are usually not necessary. However, you might call it
+            // in specific situations where you want to stop the hooks earlier.)
+            // EC2K.UnityGlobalHook.GlobalInputHook.StopHooks();
         }
 
         // Handles incoming global keyboard events.
