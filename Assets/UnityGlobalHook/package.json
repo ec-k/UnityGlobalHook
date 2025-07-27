@@ -27,5 +27,6 @@
       "path": "Samples"
     }
   ],
-  "dependencies": {}
+  "dependencies": {},
+  "license": "MIT"
 }
