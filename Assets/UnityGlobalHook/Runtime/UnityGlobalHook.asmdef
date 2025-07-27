@@ -3,6 +3,7 @@
     "rootNamespace": "EC2K.UnityGlobalHook",
     "references": [],
     "includePlatforms": [
+        "Editor",
         "WindowsStandalone32",
         "WindowsStandalone64"
     ],
