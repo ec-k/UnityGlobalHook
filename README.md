@@ -23,22 +23,22 @@ You can install this package via Git URL.
 
 ## Usage
 
-1.  Create an empty GameObject in your Unity scene (e.g., named "Global Input Manager").
-2.  Attach the `GlobalInputHook.cs` script to this GameObject.
-3.  In any other script where you want to receive global input events, subscribe to the static `GlobalInputHook.OnKeyboardEvent` and `GlobalInputHook.OnMouseEvent` actions.
+1.  Call `GlobalInputHook.StartHooks()` once on Start (anywhare on scripts).
+2.  In any other script where you want to receive global input events, subscribe to the static `GlobalInputHook.OnKeyboardEvent` and `GlobalInputHook.OnMouseEvent` actions.
 
     ```csharp
     using UnityEngine;
     // Don't forget to unsubscribe in OnDisable to prevent memory leaks!
     public class MyInputHandler : MonoBehaviour
     {
-        void OnEnable()
+        void Start()
         {
+            GlobalInputHook.StartHooks();
             GlobalInputHook.OnKeyboardEvent += HandleKeyboardInput;
             GlobalInputHook.OnMouseEvent += HandleMouseInput;
         }
 
-        void OnDisable()
+        void OnDestroy()
         {
             GlobalInputHook.OnKeyboardEvent -= HandleKeyboardInput;
             GlobalInputHook.OnMouseEvent -= HandleMouseInput;
