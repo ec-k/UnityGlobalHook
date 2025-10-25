@@ -202,21 +202,21 @@ namespace UnityGlobalHook
 
     public class GlobalKeyboardEventData
     {
-        public GlobalKeyCode KeyCode { get; internal set; }
-        public ModifierKeysState Modifiers { get; internal set; }
-        public bool IsKeyDown { get; internal set; }
+        public GlobalKeyCode KeyCode { get; set; }
+        public ModifierKeysState Modifiers { get; set; }
+        public bool IsKeyDown { get; set; }
         public bool IsHandled { get; set; } = false; // Indicates if the event should be consumed by the system. (Can be set by event subscribers)
     }
 
     public class GlobalMouseEventData
     {
-        public GlobalMouseButton Button { get; internal set; }
-        public int X { get; internal set; }
-        public int Y { get; internal set; }
-        public int DeltaWheel { get; internal set; }
-        public bool IsMouseDown { get; internal set; }
-        public bool IsMove { get; internal set; }
-        public bool IsWheel { get; internal set; }
+        public GlobalMouseButton Button { get; set; }
+        public int X { get; set; }
+        public int Y { get; set; }
+        public int DeltaWheel { get; set; }
+        public bool IsMouseDown { get; set; }
+        public bool IsMove { get; set; }
+        public bool IsWheel { get; set; }
         public bool IsHandled { get; set; } = false; // Indicates if the event should be consumed by the system. (Can be set by event subscribers)
     }
 }
